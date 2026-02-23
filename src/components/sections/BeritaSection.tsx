@@ -356,31 +356,20 @@ export default function BeritaSection({ newsList }: BeritaSectionProps) {
         {newsList.length === 0 ? (
           <EmptyBerita />
         ) : (
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(12, 1fr)",
-              gap: "20px",
-            }}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
+  
+          {/* Featured cards — 8 cols on Desktop, 1 col on Mobile */}
+          <div 
+            className={`grid grid-cols-1 md:grid-cols-2 ${
+              featured.length >= 3 ? "lg:grid-cols-3" : ""
+            } gap-5 items-start ${
+              compact.length > 0 ? "lg:col-span-8" : "lg:col-span-12"
+            }`}
           >
-            {/* Featured cards — 8 cols */}
-            <div
-              style={{
-                gridColumn: compact.length > 0 ? "1 / 9" : "1 / -1",
-                display: "grid",
-                gridTemplateColumns: featured.length === 1
-                  ? "1fr"
-                  : featured.length === 2
-                  ? "1fr 1fr"
-                  : "1fr 1fr 1fr",
-                gap: "20px",
-                alignItems: "start",
-              }}
-            >
-              {featured.map((news) => (
-                <FeaturedCard key={news.id} news={news} />
-              ))}
-            </div>
+            {featured.map((news) => (
+              <FeaturedCard key={news.id} news={news} />
+            ))}
+          </div>
 
             {/* Compact sidebar — 4 cols */}
             {compact.length > 0 && (

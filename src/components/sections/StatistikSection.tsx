@@ -287,12 +287,12 @@ export default function StatistikSection({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55, delay: 0 }}
+            className="lg:col-span-2" 
             style={{
               background: "white",
               borderRadius: "20px",
               padding: "28px 20px 20px",
               boxShadow: "0 2px 16px rgba(26,107,60,0.06)",
-              gridColumn: "span 2",
             }}
           >
             <p style={{ fontSize: "14px", fontWeight: 700, color: "#111827", marginBottom: "4px" }}>
