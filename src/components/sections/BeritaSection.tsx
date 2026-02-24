@@ -358,29 +358,22 @@ export default function BeritaSection({ newsList }: BeritaSectionProps) {
         ) : (
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
   
-          {/* Featured cards — 8 cols on Desktop, 1 col on Mobile */}
-          <div 
-            className={`grid grid-cols-1 md:grid-cols-2 ${
-              featured.length >= 3 ? "lg:grid-cols-3" : ""
-            } gap-5 items-start ${
-              compact.length > 0 ? "lg:col-span-8" : "lg:col-span-12"
-            }`}
-          >
-            {featured.map((news) => (
-              <FeaturedCard key={news.id} news={news} />
-            ))}
-          </div>
+            {/* Featured cards — 1 col di Mobile (Vertikal), 8 cols di Desktop */}
+            <div 
+              className={`grid grid-cols-1 md:grid-cols-2 ${
+                featured.length >= 3 ? "lg:grid-cols-3" : ""
+              } gap-5 items-start ${
+                compact.length > 0 ? "lg:col-span-8" : "lg:col-span-12"
+              }`}
+            >
+              {featured.map((news) => (
+                <FeaturedCard key={news.id} news={news} />
+              ))}
+            </div>
 
-            {/* Compact sidebar — 4 cols */}
+            {/* Compact sidebar — Disembunyikan di Mobile (hidden), muncul di Desktop (lg:flex) */}
             {compact.length > 0 && (
-              <div
-                style={{
-                  gridColumn: "9 / 13",
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "12px",
-                }}
-              >
+              <div className="hidden lg:flex flex-col gap-3 lg:col-span-4">
                 <p
                   style={{
                     fontSize: "12px",
