@@ -364,7 +364,7 @@ export default function LayananSection({ services }: LayananSectionProps) {
           <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
             
             <a
-              href="https://wa.me/62"
+              href="https://wa.me/6281333933683"
               target="_blank"
               rel="noopener noreferrer"
               style={{

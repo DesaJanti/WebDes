@@ -155,9 +155,9 @@ export default function Footer() {
             </p>
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "14px" }}>
               {[
-                { icon: <MapPin size={14} />, text: "Jl. Janti No.1, Kec. Slahung, Kab. Ponorogo, Jawa Timur" },
-                { icon: <Phone size={14} />, text: "+62 xxx-xxxx-xxxx" },
-                { icon: <Mail size={14} />,  text: "desajanti@ponorogo.go.id" },
+                { icon: <MapPin size={14} />, text: "Jl. Raya Ngumpul Slahung, Krajan, Janti, Kec. Slahung, Kabupaten Ponorogo, Jawa Timur 63463" },
+                { icon: <Phone size={14} />, text: "+62 81333933683" },
+                { icon: <Mail size={14} />,  text: "ds.janti@gmail.com" },
                 { icon: <Clock size={14} />, text: "Senin–Jumat, 08.00–14.00 WIB" },
               ].map((item, i) => (
                 <li key={i} style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>

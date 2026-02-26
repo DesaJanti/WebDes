@@ -18,7 +18,7 @@ const INFO_ITEMS = [
   {
     icon: <Phone size={18} />,
     label: "Telepon",
-    value: "+62 xxx-xxxx-xxxx", // Ganti dengan nomor resmi jika ada
+    value: "+62 81333933683",
   },
   {
     icon: <Clock size={18} />,
